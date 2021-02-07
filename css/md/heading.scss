@@ -1,0 +1,49 @@
+$widthRes: 800px;
+
+@mixin fontSizeRes($size, $line, $sizeRes, $lineRes) {
+	font-size: $size;
+	line-height: $line;
+	@media only screen and (max-width: $widthRes) {
+		font-size: $sizeRes;
+		line-height: $lineRes;
+	}
+}
+
+h1 {
+	@include fontSizeRes(40px, 1.5, 28px, _);
+}
+
+h2 {
+	@include fontSizeRes(28px, 1.5, 24px, _);
+}
+
+h3 {
+	@include fontSizeRes(24px, 1.5, 18px, _);
+}
+
+h4 {
+	@include fontSizeRes(18px, 1.5, 16px, 1.75);
+}
+
+h5 {
+	@include fontSizeRes(16px, 1.75, _, _);
+}
+
+h6 {
+	@include fontSizeRes(14px, 1.75, _, _);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+//

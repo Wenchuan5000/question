@@ -1,0 +1,102 @@
+@mixin bgHover($input) {
+  & {
+    // transition: background-color 0.3s;
+  }
+
+  @if $input == "normal" {
+    @media not all and (pointer: coarse) {
+      &:hover {
+        background-color: var(--cg-rgba-twilight-dark);
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        background-color: var(--cg-rgba-twilight-dark);
+      }
+    }
+  }
+
+  @else {
+    @media not all and (pointer: coarse) {
+      &:hover {
+        background-color: $input;
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+
+        background-color: $input;
+      }
+    }
+  }
+}
+
+@mixin textColorHover($input) {
+  @if $input == "normal" {
+
+  }
+
+  @else if $input == "onDark" {
+    @media not all and (pointer: coarse) {
+      &:hover {
+        color: white;
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        color: white;
+      }
+    }
+  }
+
+  @else {
+    @media not all and (pointer: coarse) {
+      &:hover {
+        color: $input;
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        color: $input;
+      }
+    }
+  }
+}
+
+@mixin borderColorHover($input) {
+  @if $input == "normal" {
+
+  }
+
+  @else if $input == "onDark" {
+    @media not all and (pointer: coarse) {
+      &:hover {
+        border-color: white;
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        border-color: white;
+      }
+    }
+  }
+
+  @else {
+    @media not all and (pointer: coarse) {
+      &:hover {
+        border-color: $input;
+      }
+    }
+
+    @media (pointer: coarse) {
+      &:active {
+        border-color: $input;
+      }
+    }
+  }
+}

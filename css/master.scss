@@ -1,0 +1,51 @@
+@import "mixin/0-mixin";
+@import "preset/0-preset";
+@import "md/0-md";
+@import "elements/0-elements";
+
+
+
+
+
+.opacityShow {
+  animation-name: opacityShow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opacityShow {
+  0% { opacity: 0%; }
+
+  20% { opacity: 0%; }
+
+  100% { opacity: 100%; }
+}
+
+
+
+// ========================================
+// 隐藏未到达的关卡
+// ========================================
+
+.turnHidden {
+  display: none;
+  opacity: 0;
+}
+
+.turnShown {
+  display: block;
+  opacity: 0;
+  animation: showTurn 0.5s forwards;
+  position: relative;
+
+  @keyframes showTurn {
+    0% {
+      margin-top: 20px;
+    }
+
+    100% {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+}

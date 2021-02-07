@@ -1,0 +1,17 @@
+#md {
+  margin-top: calc(var(--topNavHeight) + var(--mdStartMargin));
+
+  max-width: 720px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @import "heading";
+  @import "question/0-question"
+}
+
+p {
+  line-height: 1.75;
+  margin: 8px 0;
+}

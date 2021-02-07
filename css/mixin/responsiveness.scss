@@ -1,0 +1,21 @@
+@mixin resDisplayOnMobile($input) {
+  display: none;
+  @media (pointer: coarse) {
+    display: block;
+  }
+
+  @media only screen and (max-width: $input) {
+    display: block;
+  }
+}
+
+@mixin resHideOnMobile($input) {
+  display: block;
+  @media (pointer: coarse) {
+    display: none;
+  }
+
+  @media only screen and (max-width: $input) {
+    display: none;
+  }
+}
