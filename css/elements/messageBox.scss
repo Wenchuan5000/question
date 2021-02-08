@@ -1,0 +1,226 @@
+.messageBox {
+  position: fixed;
+
+  transform: translate(-50%, 0);
+  left: 50%;
+
+  width: 320px;
+  z-index: 10001;
+
+  padding: 16px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 var(--cg-rgba-twilight-dark), 0 1px 2px 0 var(--cg-rgba-twilight-medium);
+
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: 52px 224px;
+  grid-column-gap: 12px;
+
+  .mark {
+    $markDiameter: 52px;
+    $markRadius: $markDiameter / 2;
+    $iconFontSize: 24px;
+
+    height: $markDiameter;
+    width: $markDiameter;
+    position: relative;
+
+    i {
+      display: block;
+      width: $markDiameter;
+      line-height: $markDiameter;
+      border-radius: 100px;
+      font-size: $iconFontSize;
+      background-color: grey;
+
+
+      cursor: default;
+    }
+
+    .star {
+      $starPathLenght: 100px;
+
+      position: absolute;
+      width: $starPathLenght; height: 8px;
+      transform: translate(-50%, -50%);
+      left: 50%; top: 50%;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 8px; height: 8px;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        left: 30%;
+        top: 50%;
+        border-radius: 1000px;
+      }
+
+      &.i1 {
+        transform: translate(-50%, -50%) rotate(0deg);
+        &::before {background-color: var(--color-blue);}
+      }
+
+      &.i2 {
+        transform: translate(-50%, -50%) rotate(45deg);
+        &::before {background-color: var(--color-teal);}
+      }
+
+      &.i3 {
+        transform: translate(-50%, -50%) rotate(90deg);
+        &::before {background-color: var(--color-green);}
+      }
+
+      &.i4 {
+        transform: translate(-50%, -50%) rotate(135deg);
+        &::before {background-color: var(--color-yellow);}
+      }
+
+      &.i5 {
+        transform: translate(-50%, -50%) rotate(180deg);
+        &::before {background-color: var(--color-orange);}
+      }
+
+      &.i6 {
+        transform: translate(-50%, -50%) rotate(225deg);
+        &::before {background-color: var(--color-pink);}
+      }
+
+      &.i7 {
+        transform: translate(-50%, -50%) rotate(270deg);
+        &::before {background-color: var(--color-purple);}
+      }
+
+      &.i8 {
+        transform: translate(-50%, -50%) rotate(315deg);
+        &::before {background-color: var(--color-indigo);}
+      }
+    }
+  }
+
+  .text {
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    p {
+      margin-top: 4px;
+      line-height: 24px;
+      color: var(--cg-hex-grey-light);
+    }
+  }
+
+
+  // 显示
+
+  & {
+    animation: showMessageBox 2s forwards;
+
+    @keyframes showMessageBox {
+      0% {
+        top: -100px;
+        opacity: 0;
+      }
+
+      1% {
+        top: -24px;
+        opacity: 0;
+      }
+
+      15% {
+        top: 24px;
+        opacity: 1;
+      }
+
+      85% {
+        top: 24px;
+        opacity: 1;
+      }
+
+      99% {
+        top: -24px;
+        opacity: 0;
+      }
+
+      100% {
+        top: -100px;
+        opacity: 0;
+      }
+    }
+  }
+
+
+  // js 动作
+
+
+
+  &.tadashii {
+    @keyframes tadashiiStars {
+      0% {
+
+      }
+
+      50% {
+        left: 0px;
+        opacity: 1;
+        width: 12px; height: 12px;
+      }
+
+      99% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+        left: 0px;
+      }
+    }
+
+    .mark {
+      i {
+        background-color: var(--b-color);
+      }
+
+      .star {
+        display: block;
+
+        &::before {
+          animation: tadashiiStars 0.5s forwards;
+          animation-delay: 0.2s;
+        }
+      }
+    }
+
+    h1 {
+      color: var(--b-color);
+    }
+  }
+
+  &.batsu {
+    i {
+      background-color: var(--color-red);
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

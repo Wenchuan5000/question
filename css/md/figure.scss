@@ -1,0 +1,13 @@
+figure, img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 24px 0;
+
+  figcaption {
+    p:last-child {
+      margin-bottom: 0 ;
+    }
+  }
+}

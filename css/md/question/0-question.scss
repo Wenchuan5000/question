@@ -1,16 +1,16 @@
 &.questionList {
 
-  max-width: 100%;
-  padding: 0;
+  .turnHead {
 
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-  .turn {
-    max-width: 100%;
-    padding: 12px calc((100% - 720px) / 2);
-    border-left: 24px solid rgba(0, 0, 0, 0);
-    border-right: 24px solid rgba(0, 0, 0, 0);
-    &:hover {
-      @include bgHover(var(--cg-hex-twilight-light));
+    h1 {
+      margin-top: 0.5em;
     }
   }
 
@@ -19,21 +19,20 @@
     cursor: pointer;
 
     &:hover {
-      @include bgHover(var(--b-color));
-      @include textColorHover(white);
-      @include borderColorHover(var(--b-color));
+      @include bgHover(var(--b-color), 0.3s);
+      @include textColorHover(white, 0.3s);
     }
 
 
   }
 
   .abcd {
-    margin-top: 12px;
+    margin: 12px 0;
 
     & {
       display: grid;
-      grid-template-columns: calc(50% - 4px) calc(50% - 4px);
-      grid-gap: 8px;
+      grid-template-columns: calc(50% - 6px) calc(50% - 6px);
+      grid-gap: 12px;
 
       @media only screen and (max-width: 600px) {
         grid-template-columns: 100%;
@@ -41,9 +40,17 @@
 
       .selection {
         padding: 8px 12px;
-        border: 2px solid var(--cg-hex-twilight-medium);
+        box-shadow: 0 2px 6px var(--cg-rgba-twilight-medium),
+                    0 2px 2px var(--cg-rgba-twilight-medium),
+                    0 0 1px var(--cg-rgba-twilight-dark);
         border-radius: 8px;
         text-align: center;
+        color: var(--b-color);
+        font-weight: 500;
+
+        figure {
+          margin: 0;
+        }
       }
     }
   }

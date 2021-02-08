@@ -1,6 +1,6 @@
-@mixin bgHover($input) {
+@mixin bgHover($input, $transition) {
   & {
-    // transition: background-color 0.3s;
+    transition: background-color $transition;
   }
 
   @if $input == "normal" {
@@ -33,7 +33,11 @@
   }
 }
 
-@mixin textColorHover($input) {
+@mixin textColorHover($input, $transition) {
+  & {
+    transition: background-color $transition;
+  }
+
   @if $input == "normal" {
 
   }

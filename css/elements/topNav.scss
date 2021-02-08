@@ -1,4 +1,4 @@
-.topNav {
+#topNav {
   height: var(--topNavHeight);
   position: fixed;
   top: 0;
@@ -6,6 +6,8 @@
   z-index: 10000;
   width: 100%;
   background-color: white;
+
+  border-bottom: 1px solid var(--cg-hex-twilight-dark);
 
   .progressBar {
     height: 2px;

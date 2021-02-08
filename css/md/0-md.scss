@@ -1,5 +1,6 @@
 #md {
-  margin-top: calc(var(--topNavHeight) + var(--mdStartMargin));
+  // 此处的 marginTop 放在了 js 里
+  margin-bottom: 240px;
 
   max-width: 720px;
   padding-left: 24px;
@@ -8,7 +9,10 @@
   margin-right: auto;
 
   @import "heading";
-  @import "question/0-question"
+  @import "figure";
+
+  @import "question/0-question";
+
 }
 
 p {
