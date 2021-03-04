@@ -1,0 +1,95 @@
+rpgGoes {
+  display: block;
+  width: 100%;
+
+  cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+
+    background-image: url("https://previews.123rf.com/images/sergfear/sergfear1712/sergfear171200119/91603944-vector-abstract-pink-pale-geometric-gradient-background-vector-from-polygons-triangle-vector-illustr.jpg");
+    background-size: cover;
+
+    overflow-y: scroll;
+
+    padding: 24px 16px;
+    padding-bottom: 40px;
+
+
+    selections {
+      display: block;
+
+      selection {
+        display: block;
+        color: red;
+        background-color: white;
+      }
+    }
+  }
+
+
+  turn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // background: rgba(red, 0.1);
+    background-image: url("https://previews.123rf.com/images/sergfear/sergfear1712/sergfear171200119/91603944-vector-abstract-pink-pale-geometric-gradient-background-vector-from-polygons-triangle-vector-illustr.jpg");
+    background-size: cover;
+
+    overflow-y: scroll;
+
+    padding: 24px 16px;
+    padding-bottom: 40px;
+
+    selections {
+      display: grid;
+      margin: 2rem 0;
+
+      grid-template-columns: 100%;
+      grid-gap: 8px;
+
+
+      selection {
+        // border: 2px solid var(--cg-hex-twilight-medium);
+        box-shadow: 0 2px 8px var(--cg-rgba-twilight-dark),
+                    0 1px 3px var(--cg-rgba-twilight-medium);
+
+        border-radius: 16px;
+        padding: 8px;
+        color: var(--b-color);
+        font-weight: 500;
+        text-align: center;
+
+        background-color: white;
+
+        img {
+          border-radius: 8px;
+          width: 100%;
+        }
+
+        &.chosen {
+          background-color: var(--b-color);
+          border-color: var(--b-color);
+          color: white;
+        }
+      }
+
+      &.gallary {
+        grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+
+        selection {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+
+    }
+  }
+}
