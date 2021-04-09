@@ -5,4 +5,5 @@ function importJS(_src, _id) {
   document.querySelector("#scriptGoesHere").appendChild(imported);
 }
 
-importJS("code/pageScroll/script.js", "")
+importJS("code/pageScroll/script.js", "");
+importJS("code/messageBox/script.js", "");

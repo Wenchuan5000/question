@@ -1,6 +1,6 @@
 // 这个函数用于隐藏全部以编辑过的回合
 function hideTurnFirst() {
-  var allTurns = document.querySelectorAll("turn");
+  var allTurns = document.querySelectorAll(".turn");
   for (var i = 0; i < allTurns.length; i++) {
     // allTurns[i].classList.add("turnHidden");
     allTurns[i].style.display = "none";
@@ -18,6 +18,7 @@ function goTo(input) {
   input.style.opacity = "0";
 
   setTimeout(function() {
+    scrollToTop();
     input.style.transition = "opacity 0.8s";
     input.style.opacity = "1";
   }, 1000)
@@ -30,10 +31,20 @@ function showFirstTurn() {
   goTo(firstTurn);
 }
 
+//
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+var indexChangeBg = 0;
+
+
 
 // 写成了事件监听，根据 classList 中的第一个 className 确定下一个显示那个一个回合
 function pass() {
-  var selection = document.querySelectorAll("selection");
+  var selection = document.querySelectorAll(".selections li");
 
   if (selection != null) {
     for (var i = 0; i < selection.length; i++) {
@@ -41,7 +52,7 @@ function pass() {
         console.log("selected!");
 
         // 防止双击误触
-        var prevent = this.parentElement.querySelectorAll("selection");
+        var prevent = this.parentElement.querySelectorAll(".selections li");
         for (var j = 0; j < prevent.length; j++) {
           console.log("Btn No." + j + " is prevented!");
           prevent[j].style.pointerEvents = "none";
@@ -72,9 +83,52 @@ function pass() {
 
         goTo(target);
 
+
       })
     }
   }
 }
 
 pass();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

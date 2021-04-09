@@ -1,0 +1,26 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, PingFang SC, "Apple Color Emoji", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", sans-serif;
+
+  color: var(--cg-hex-dark);
+}
+
+@font-face {
+  font-family: 'tingoIcon';  /* project id 2224648 */
+  src: url('https://at.alicdn.com/t/font_2224648_b5c15nrtiym.eot');
+  src: url('https://at.alicdn.com/t/font_2224648_b5c15nrtiym.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_2224648_b5c15nrtiym.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_2224648_b5c15nrtiym.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_2224648_b5c15nrtiym.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_2224648_b5c15nrtiym.svg#tingoIcon') format('svg');
+}
+
+.myIcon {
+  font-family: "tingoIcon" !important;
+  display: inline-block;
+  text-align: center;
+}
